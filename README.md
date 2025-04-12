@@ -9,14 +9,14 @@ In this lab, we take on the role of a SOC Analyst assisting a colleague, Johny, 
 ## 🔍 Investigation Questions and Answers
 
 ### 1. **How many events were collected and ingested in the index `main`?**  
-Loading up our instance and setting our index as 'main' shows us our total events.
+Loading up the instance and setting the index as 'main' shows us the total events.
 
 ![Total Events](question1_answer.png)
 
 **Answer:** `12256`
 
 ### 2. **What is the name of the new backdoor user created by the adversary?**  
-For this I searched by event ID, found the one corresponding to user creation and our answer was in the event logs with a sneaky mistype.
+For this I searched by event ID, found the one corresponding to user creation, and our answer was in the event logs with a sneaky mistype.
 
 ![Backdoor User](question2_answer.png)
 
@@ -46,15 +46,32 @@ C:\windows\System32\Wbem\WMIC.exe" /node:WORKSTATION6 process call create "net u
 ```
 
 ### 6. **How many login attempts from the backdoor user were observed?**  
+Not going to lie I thought I was suppose to be getting an answer here, but searching by EventID=4624 for logins and piping the result to a wc showed 0 and that is the answer.
+
+![login count](question5_answer.png)
+
 **Answer:** `0`
 
 ### 7. **Which infected host executed suspicious PowerShell commands?**  
 **Answer:** `James.browne`
 
 ### 8. **How many PowerShell events were logged for the malicious execution?**  
+Here I had to do a bit of research again on EventIDs and found this https://www.myeventlog.com/search/show/980, https://www.myeventlog.com/search/show/977, regarding EventID:4103, 4104, execute a remote powershell command, and pipeline. Filtering with these will give us our answer of total events.
+
+![powershell events](question6_answer.png)
+
 **Answer:** `79`
 
 ### 9. **What is the full URL that the encoded PowerShell script attempted to contact?**  
+I love decoding and encoding so this one was quite fun. The giant string in our powershell command is clearly obfuscated directions so I gave it to chatGPT which gave me the rundown of type of code it was. Let's take that to cyberchef and from here we can base64 decode our very long string of characters, and then I want to add UTF-16LE(1200) encoding. Once we have our forumla set, input our string and we'll get a result that looks like this.
+
+![Decode](question7_answer.png)
+
+
+
+
+There's a section of this command that is encoded one step further, and have a variable set. Take the rest home.
+
 **Answer:**  
 `hxxp[://]10[.]10[.]10[.]5/news[.]php`
 
