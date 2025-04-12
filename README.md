@@ -13,21 +13,33 @@ Loading up our instance and setting our index as 'main' shows us our total event
 
 ![Total Events](question1_answer.png)
 
-
-
 **Answer:** `12256`
 
 ### 2. **What is the name of the new backdoor user created by the adversary?**  
+For this I searched by event ID, found the one corresponding to user creation and our answer was in the event logs with a sneaky mistype.
+
+![Backdoor User](question2_answer.png)
+
 **Answer:** `A1berto`
 
 ### 3. **What is the full path of the registry key updated for the backdoor user?**  
+Here we wanted to search with our user "A1berto" along with the EventID for reg keys being updated. If the ID's are correct we should find our answer.
+
+![Reg Key Path](question3_answer.png)
+
 **Answer:**  
 `HKLM\SAM\SAM\Domains\Account\Users\Names\A1berto`
 
-### 4. **Which legitimate user was the adversary trying to impersonate?**  
+### 4. **Which legitimate user was the adversary trying to impersonate?** 
+This one doesn't need much of an explanation hopefully or a photo. 
+
 **Answer:** `Alberto`
 
 ### 5. **What command was used to add the backdoor user from a remote computer?**  
+I got stuck here for a good minute trying to find the right thing to search. I ended up searching the fields for "net user /add A1berto paw0rd1" and scrolled through a few logs to get our answer as seen in the previous screenshots and found the answer.
+
+![Full CMD line](question4_answer.png)
+
 **Answer:**
 ```
 C:\windows\System32\Wbem\WMIC.exe" /node:WORKSTATION6 process call create "net user /add A1berto paw0rd1
