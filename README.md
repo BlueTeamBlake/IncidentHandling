@@ -53,6 +53,8 @@ Not going to lie I thought I was suppose to be getting an answer here, but searc
 **Answer:** `0`
 
 ### 7. **Which infected host executed suspicious PowerShell commands?**  
+This corresponds to the logs we've been looking at and who has been the one executing them. 
+
 **Answer:** `James.browne`
 
 ### 8. **How many PowerShell events were logged for the malicious execution?**  
