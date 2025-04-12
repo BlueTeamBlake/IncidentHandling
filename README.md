@@ -23,7 +23,7 @@ For this I searched by event ID, found the one corresponding to user creation an
 **Answer:** `A1berto`
 
 ### 3. **What is the full path of the registry key updated for the backdoor user?**  
-Here we wanted to search with our user "A1berto" along with the EventID for reg keys being updated. If the ID's are correct we should find our answer.
+Here I wanted to search with our user "A1berto" along with the EventID for reg keys being updated. If the ID's are correct we should find our answer.
 
 ![Reg Key Path](question3_answer.png)
 
