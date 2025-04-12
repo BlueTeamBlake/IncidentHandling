@@ -70,7 +70,7 @@ I love decoding and encoding so this one was quite fun. The giant string in our 
 
 
 
-There's a section of this command that is encoded one step further, and have a variable set. Take the rest home.
+There's a section of this command that is encoded one step further, and has a variable set. Take the rest home.
 
 **Answer:**  
 `hxxp[://]10[.]10[.]10[.]5/news[.]php`
