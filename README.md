@@ -16,7 +16,7 @@ Loading up the instance and setting the index as 'main' shows us the total event
 **Answer:** `12256`
 
 ### 2. **What is the name of the new backdoor user created by the adversary?**  
-For this I searched by event ID, found the one corresponding to user creation, and our answer was in the event logs with a sneaky mistype.
+For this I searched by event ID, found the one corresponding to user creation, and the answer was in the event logs with a sneaky mistype.
 
 ![Backdoor User](question2_answer.png)
 
