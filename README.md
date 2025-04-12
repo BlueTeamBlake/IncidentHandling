@@ -53,7 +53,7 @@ Not going to lie I thought I was suppose to be getting an answer here, but searc
 **Answer:** `0`
 
 ### 7. **Which infected host executed suspicious PowerShell commands?**  
-This corresponds to the logs we've been looking at and who has been the one executing them. 
+This corresponds to the logs we've been looking at and who has been the one executing them, if you filter by accounts and powershell.exe it will point to one user.
 
 **Answer:** `James.browne`
 
