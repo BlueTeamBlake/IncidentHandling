@@ -9,6 +9,12 @@ In this lab, we take on the role of a SOC Analyst assisting a colleague, Johny, 
 ## 🔍 Investigation Questions and Answers
 
 ### 1. **How many events were collected and ingested in the index `main`?**  
+Loading up our instance and setting our index as 'main' shows us our total events.
+
+![Total Events](question1_answer.png)
+
+
+
 **Answer:** `12256`
 
 ### 2. **What is the name of the new backdoor user created by the adversary?**  
