@@ -63,7 +63,7 @@ Here I had to do a bit of research again on EventIDs and found this https://www.
 **Answer:** `79`
 
 ### 9. **What is the full URL that the encoded PowerShell script attempted to contact?**  
-I love decoding and encoding so this one was quite fun. The giant string in our powershell command is clearly obfuscated directions so I gave it to chatGPT which gave me the rundown of type of code it was. Let's take that to cyberchef and from here we can base64 decode our very long string of characters, and then I want to add UTF-16LE(1200) encoding. Once we have our forumla set, input our string and we'll get a result that looks like this.
+I love decoding and encoding so this one was quite fun. The giant string in our powershell command is clearly obfuscated directions so I gave it to chatGPT which gave me the decoding instructions. Let's take that to cyberchef and from here we can base64 decode our very long string of characters, and then I want to add UTF-16LE(1200) encoding. Once we have our forumla set, input our string and we'll get a result that looks like this.
 
 ![Decode](question7_answer.png)
 
