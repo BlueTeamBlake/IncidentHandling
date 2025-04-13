@@ -4,6 +4,7 @@
 
 In this lab, we take on the role of a SOC Analyst assisting a colleague, Johny, who has identified anomalous behavior on a number of Windows machines. It appears that an adversary gained access to these hosts and successfully installed a backdoor. Logs from the suspected systems were ingested into **Splunk** for centralized investigation. Our mission: analyze the logs and uncover the attacker's activity.
 
+## Note: Some research may still be required to find out EventID and search queries
 ---
 
 ## 🔍 Investigation Questions and Answers
